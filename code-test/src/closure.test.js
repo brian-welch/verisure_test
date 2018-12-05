@@ -22,16 +22,8 @@ describe('counter', () => {
     return () => ++m;
   })(-1);
 
-  // I was forced to find the solution with help from stack overflow, as none of my solutions were working
-  // const count = () => {
-  //   let countUp = function(n) {
-  //     return function() {
-  //       n += 1;
-  //       return n;
-  //     }
-  //   };
-  //   return countUp;
-  // };
+  //  again utilizing an inner closure to increment, and also calling the function directly to initiate a starting or history of the function
+
 
   it('returns an increasing number each time it is called', () => {
     assert.equal(count(), 0);
